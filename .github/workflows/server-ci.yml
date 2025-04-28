@@ -1,0 +1,15 @@
+name: bigdecimal
+on:
+  push:
+jobs:
+  bigdecimal:
+    runs-on: ubuntu-22.04	
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.4"
+          bundler-cache: true
+      - run: gem ins bigdecimal
